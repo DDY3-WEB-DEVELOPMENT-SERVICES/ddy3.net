@@ -1,6 +1,8 @@
 import localFont from "next/font/local";
 import './globals.css'
 
+import {NavigationBar} from './ComponentRegistry';
+
 const ZalandoSansSemiExpanded = localFont({
   src: '../public/app-fonts/font-zalando-sans-semiexpanded-var.ttf',
   weight: '200 900',
@@ -27,7 +29,10 @@ export default function RootLayout(
 ) {
   return (
     <html lang="en" className={`${ZalandoSansSemiExpanded.variable} ${InstrumentSans.variable} ${ChivoMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <NavigationBar />
+        {children}
+      </body>
     </html>
   );
 }

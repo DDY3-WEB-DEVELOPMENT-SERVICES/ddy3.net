@@ -1,8 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  /* Centra */
+  --color-livewire: #6ed5cc;
+  --color-cation: #008e90;
+  --color-anion: #febb15;
+
+  /* Planitia */
+  --color-selenium: #eafffe;
+  --color-silicon: #003a4a;
+  --color-aurum: #fede65;
+  --color-nitrogen: #b5fff7;
+  --color-oxygen: #adffba;
+
+  /* Irradia */
+  --color-spica: #b5ddd5;
+  --color-regulus: #427e7e;
+  --color-vega: #8cd325;
+  --color-proxima: #ec502e;
+
+  /* Spark */
+  --gradient-spark-midday-linear-rl: linear-gradient(to left, var(--color-livewire), var(--color-nitrogen), var(--color-selenium)); 
+}
+
+body::before {
+  background-color: var(--color-selenium)
+}
+
 body {
   font-family: var(--font-content);
+  background-color: var(--color-selenium);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 200;
+}
+
+#nav {
+  border-radius: 10px;
+  margin: 10px;
+  background-color: white;
+  border: 1px solid var(--color-nitrogen);
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
+}
+
+#forefronter-txt-navbar {
+  color: var(--color-cation);
+  font-weight: 100;
+  margin-inline-start: 16px;
 }
