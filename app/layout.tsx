@@ -1,28 +1,14 @@
-import localFont from "next/font/local";
-import './globals.css'
+import { Metadata } from 'next'
 
-import {NavigationBar} from './ComponentRegistry';
+import '@/app/--sources/styles/globals.css'
+import { 
+  ZalandoSansSemiExpanded, 
+  InstrumentSans, 
+  ChivoMono 
+} from '@/app/--sources/registries/fonts'
+import { NavigationBar } from '@/app/--sources/registries/components';
 
-const ZalandoSansSemiExpanded = localFont({
-  src: '../public/app-fonts/font-zalando-sans-semiexpanded-var.ttf',
-  weight: '200 900',
-  variable: '--font-display',
-  display: 'swap',
-});
-
-const InstrumentSans = localFont({
-  src: '../public/app-fonts/font-instrument-sans-var.ttf',
-  weight: '400 700',
-  variable: '--font-content',
-  display: 'swap',
-});
-
-const ChivoMono = localFont({
-  src: '../public/app-fonts/font-chivo-mono-var.ttf',
-  weight: '100 900',
-  variable: '--font-technical',
-  display: 'swap',
-});
+export const metadata: Metadata = { title: "DDY3 Forefronter", description: "Bringing your ideas from wisdom to web." };
 
 export default function RootLayout(
   {children}: {children: React.ReactNode}

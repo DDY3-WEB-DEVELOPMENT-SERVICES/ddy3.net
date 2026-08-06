@@ -1,5 +1,5 @@
 import HomeLink from './HomeLink'; 
-import '@/app/globals.css'
+import '@/app/--sources/styles/globals.css'
 
 export default function NavigationBar() {
     return (
